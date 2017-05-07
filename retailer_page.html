@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta content="HTML;charset=UTF-8" http-euive="Content-Type"> 
+    <title>FarmDirect</title>
+    <script type="text/javascript" src="farmdirect.js"></script>
+    <link rel="stylesheet" href="retailer_page.css">
+    <link rel="icon" href="fd.png">
+</head>
+    <body onload="checkValidSessionRetailer()">
+<h1><center>Retailer DashBoard</center></h1>
+      <div class="dropdown1" style="float:right">
+       <button class="dropbtn"><input class="dropbtn" type="text" id="username" readonly></button> 
+          <div class="dropdown-content">
+                <a href="#">Contact Us</a>
+                <a href="#" onclick="logout()">Logout</a>
+           </div>
+      </div>
+    <div class="drop">
+     <select id="cropno" onchange="getDropDownDataRetailer()">    
+         <option selected="selected" disabled="disabled">Select</option>
+         <option id="1">Vegetables</option>
+        <option id="4">Fruits</option>
+    </select>
+    </div>
+    <div class="drop">
+    <select id="cropname">  
+    </select>
+     <div class="button">
+            <a class="button" onclick="retailer()" href="#">Submit</a>
+    </div>
+    </div>
+    <table align="center" cellpadding="2px">
+            <TR>
+                <TH COLSPAN="7">
+                <H3>CROP INFORMATION</H3>
+                </TH>
+            </TR>
+            <TH>First Name</TH>
+            <TH>Last Name</TH>
+            <TH>Location</TH>
+            <TH>Contact</TH>
+            <TH>Crop Name</TH>
+            <TH>Price</TH>
+            <TH>Quantity</TH>
+                   
+            
+        </table>
+
+         <table align="center" cellpadding="2px" id="table">
+            
+          
+           
+                   
+            
+        </table>
+
+
+
+    </body>
+</html>

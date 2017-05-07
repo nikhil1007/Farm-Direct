@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>FarmDirect</title>   
+    <link rel="stylesheet" href="farmer_page.css">
+    <link rel="icon" href="fd.png"> 
+    <script type="text/javascript" src="farmdirect.js"></script>    
+</head>
+<body onload="checkValidSessionFarmer();">
+<h1><center>Dashboard</center></h1>
+<div class="dropdown1" style="float:right">
+            <button class="dropbtn"><input class="dropbtn" type="text" id="username" readonly></button>
+          <div class="dropdown-content">
+                <a  href="#">Contact Us</a>
+                <a href ="#" onclick="logout()">Logout</a>
+    </div>
+    </div>
+<h2><center>Your Products</center></h2>
+<table id="table_view" align="center">
+<TR>
+    <TH>Serial Number</TH>
+    <TH>Crop Name</TH>
+    <TH>Max Quantity Per Order (Kg)</TH>
+    <TH>Price (Rs/Kg)</TH>
+</TR>
+<TR>
+    <TD>1</TD>
+    <TD><input type="text" id="0.0" readonly></TD>
+    <TD><input type="text" id="0.1" readonly></TD>
+    <TD><input type="text" id="0.2" readonly></TD>
+</TR>
+<TR>
+    <TD>2</TD>
+    <TD><input type="text" id="1.0" readonly></TD>
+    <TD><input type="text" id="1.1" readonly></TD>
+    <TD><input type="text" id="1.2" readonly></TD>
+</TR>
+<TR>
+    <TD>3</TD>
+    <TD><input type="text" id="2.0" readonly></TD>
+    <TD><input type="text" id="2.1" readonly></TD>
+    <TD><input type="text" id="2.2" readonly></TD>
+</TR>
+<TR>
+    <TD>4</TD>
+    <TD><input type="text" id="3.0" readonly></TD>
+    <TD><input type="text" id="3.1" readonly></TD>
+    <TD><input type="text" id="3.2" readonly></TD>
+</TR>
+</table>
+
+<h2><center>Edit Products</center></h2>
+<table id="table_edit" align="center">
+            <TH>Select Serial</TH>
+            <TH>Select Crop Name</TH>
+            <TH>Select Quantity</TH>
+            <TH>Set Price (Rs/Kg)</TH>
+    <TR>
+                    <TD ALIGN="center">
+                        <select id="cropno" onchange="getDropDownDataFarmer()">    
+                            <option selected="selected" disabled="disabled">Select</option>
+                            <option id="1">1</option>
+                            <option id="2">2</option>
+                            <option id="3">3</option>
+                            <option id="4">4</option>
+                        </select>
+                    </TD>    
+                    <TD ALIGN="center">
+                        <select id="cropname">    
+                        </select>
+                    </TD> 
+                    <TD><input type="number" id="newquant"></TD>
+                    <TD><input type="number" id="newprice"></TD>
+    </TR>
+</table>
+ <div class="button">
+    <a class="button" href="#" onclick="editFarmerData()">Submit Changes</a>
+</div>
+<h2><center>Delete Products</center></h2>
+<table  id="table_delete" align="center" width="400px" class="table2">
+    <TH>Select Serial</TH>
+    <TR>
+     <TD ALIGN="center">
+            <select id="deletecropid">   
+                <option selected="selected" disabled="disabled">Select Serial </option>
+                <option id="1">1</option>
+                <option id="2">2</option>
+                <option id="3">3</option>
+                <option id="4">4</option>
+             </select>
+    </TD>       
+    </TR>
+    </table>
+    <div class="button1">
+    <a class="button1" href="#" onclick="deleteFarmerData()">Delete Entry</a>
+</div>
+</body>
+</html>
